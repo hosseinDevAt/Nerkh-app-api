@@ -21,8 +21,11 @@ class FetchGoldPrice extends Command
     {
         $this->info('در حال دریافت اطلاعات از BrsApi...');
 
+
+        // API Key for BrsApi service.
+        // Get your own key from BrsApi.ir and replace 'YOUR_API_KEY_HERE'
         $response = \Illuminate\Support\Facades\Http::get('https://BrsApi.ir/Api/Market/Gold_Currency.php', [
-            'key' => 'BfTYbSljKInixBiTv46G6fffvp9DdhGe'
+            'key' => 'YOUR_API_KEY_HERE',
         ]);
 
         if ($response->successful()) {
